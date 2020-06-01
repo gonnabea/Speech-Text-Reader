@@ -15,6 +15,7 @@ header{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-bottom: 50px;
 }
 
 .toggle-btn{
@@ -26,6 +27,8 @@ header{
     font-size: 20px;
     border: none;
     outline: none;
+    cursor: pointer;
+    border-radius: 5px;
 }
 
 .examples{
@@ -34,7 +37,6 @@ header{
 }
 
 .example-box{
-    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -44,14 +46,32 @@ header{
 .example_img{
     width: 23vw;
     height: 250px;
+    cursor: pointer;
 }
 
 .example_text{
     position: relative;
     bottom: 50px;
-    color: white;
+    color: black;
+    font-weight: 700;
     width: 23vw;
     display: flex;
     justify-content: center;
-    background-color: rgba(0,0,0,0.3);
+    align-items: center;
+    background-color: rgba(9, 255, 193, 0.8);
+    cursor: pointer;
+    height: 50px;
+    font-size: 20px;
+}
+
+@keyframes clicked{
+    20%{
+        box-shadow: 0 0 20px rgb(11, 102, 240);
+    }
+    60%{
+        box-shadow: 0 0 40px rgb(11, 102, 240);
+    }
+    100%{
+        box-shadow: none;
+    }
 }
