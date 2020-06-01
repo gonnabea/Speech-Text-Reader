@@ -64,6 +64,47 @@ header{
     font-size: 20px;
 }
 
+.modal-container{
+    display: flex;
+    justify-content: center;
+}
+
+.modal{
+    background-color: #333333;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    height: 300px;
+    align-items: center;
+    border-radius: 5px;
+    justify-content: space-around;
+}
+
+.modal-title.select-voice,.example-texts,.read-btn{
+    width: 90%;
+    border-radius: 5px;
+}
+
+.select-voice{
+    height: 30px;
+    background-color: #E9967A;
+    color: white;
+}
+
+.example-texts{
+    height: 50%;
+}
+
+.read-btn{
+    height: 30px;
+    background-color: #E9967A;
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
 @keyframes clicked{
     20%{
         box-shadow: 0 0 20px rgb(11, 102, 240);

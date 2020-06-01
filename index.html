@@ -8,6 +8,16 @@
 </head>
 <body>
     <section class="background">
+        <div class="modal-container">
+            <div class="modal" id="modal">
+                <h1 class="modal-title" id="modalTitle">음성 선택</h1>
+                <select class="select-voice" id="selectVoice">
+                    <option value="">a</option>
+                </select>
+                <input type="text" class="example-texts" placeholder="텍스트를 입력하세요" id="exampleTexts">
+                <input type="submit" class="read-btn" id="readBtn" value="텍스트 읽기">
+            </div>
+        </div>
         <header>
             <h1 class="title">Speech Text Reader</h1>
             <button class="toggle-btn">보이스 선택</button>
@@ -19,7 +29,7 @@
             </div>
             <div class="example-box" id="exampleBox">
                 <img src="https://vanillawebprojects.com/projects/speech-text-reader/img/food.jpg" alt="" class="example_img">
-                <div class="example_text">I'm HUNGRY</div>
+                <div class="example_text">I'M HUNGRY</div>
             </div>
             <div class="example-box" id="exampleBox">
                 <img src="https://vanillawebprojects.com/projects/speech-text-reader/img/tired.jpg" alt="" class="example_img">
