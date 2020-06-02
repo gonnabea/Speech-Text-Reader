@@ -31,6 +31,10 @@ header{
     border-radius: 5px;
 }
 
+.toggle-btn:active{
+    transform: translateY(5px);
+}
+
 .examples{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -97,7 +101,7 @@ header{
     cursor: pointer;
 }
 
-.modal-title.select-voice,.example-texts,.read-btn{
+.modal-title,.select-voice,.example-texts,.read-btn{
     width: 90%;
     border-radius: 5px;
 }
