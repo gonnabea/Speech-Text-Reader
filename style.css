@@ -51,6 +51,7 @@ header{
     width: 23vw;
     height: 250px;
     cursor: pointer;
+    border-radius: 5px;
 }
 
 .example_text{
@@ -66,7 +67,37 @@ header{
     cursor: pointer;
     height: 50px;
     font-size: 20px;
+    border-radius: 0 0 5px 5px;
 }
+
+@media screen and (max-width: 1100px){
+    .examples{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .example_img,.example_text{
+        width: 30vw;
+    }
+}
+
+@media screen and (max-width: 760px){
+    .examples{
+        grid-template-columns: 1fr 1fr;
+    }
+    .example_img,.example_text{
+        width: 45vw;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .examples{
+        grid-template-columns: 1fr;
+    }
+    .example_img,.example_text{
+        width: 90vw;
+    }
+}
+
+
 
 .modal-container{
     display: flex;
