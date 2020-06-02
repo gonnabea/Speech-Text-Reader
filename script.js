@@ -4,7 +4,9 @@ toggleBtn = document.getElementById("toggleBtn"),
 modal = document.getElementById("modal"),
 exitBtn = document.getElementById("exitBtn"),
 selectVoice = document.getElementById("selectVoice"),
-voiceOptions = document.getElementsByClassName("voice-option")
+voiceOptions = document.getElementsByClassName("voice-option"),
+exampleTexts = document.getElementById("exampleTexts"),
+readBtn = document.getElementById("readBtn")
 
 let voiceIndex = 0;
 
@@ -32,18 +34,20 @@ function hideModal(){
 
 function imgClick(e){
     const content = e.target.parentNode.childNodes[3].innerHTML;
-    console.log(content)
-    const voices = window.speechSynthesis.getVoices()
-    console.log(voices)
     const speak = new SpeechSynthesisUtterance(content);
+    const voices = window.speechSynthesis.getVoices()
     speak.voice = voices[voiceIndex]
     window.speechSynthesis.speak(speak);
     e.target.style.animation = "clicked 1s";
     setTimeout(() =>{e.target.style.animation = "";},1000);
 }
 
-function readText(e){
-    console.log(e.target.parentNode.lastchild)
+function readText(){
+    const content = exampleTexts.value;
+    const speak = new SpeechSynthesisUtterance(content);
+    const voices = window.speechSynthesis.getVoices()
+    speak.voice = voices[voiceIndex];
+    window.speechSynthesis.speak(speak)
 }
 
 function changeVoice(e){
@@ -57,6 +61,8 @@ function init(){
     };
     toggleBtn.addEventListener("click", showModal);
     selectVoice.addEventListener("change", changeVoice);
+    readBtn.addEventListener("click", readText);
+    makeOptions()
 }
 
 init();
