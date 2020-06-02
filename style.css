@@ -79,6 +79,22 @@ header{
     align-items: center;
     border-radius: 5px;
     justify-content: space-around;
+    margin-top: -300px;
+    position: absolute;
+    z-index: 10;
+}
+
+.modal-top{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+}
+
+.exit-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
 }
 
 .modal-title.select-voice,.example-texts,.read-btn{
@@ -114,5 +130,23 @@ header{
     }
     100%{
         box-shadow: none;
+    }
+}
+
+@keyframes showModal{
+    from{
+        margin-top: -300px;
+    }
+    to{
+        margin-top: 200px;
+    }
+}
+
+@keyframes hideModal{
+    from{
+        margin-top: 200px;
+    }
+    to{
+        margin-top: -300px;
     }
 }

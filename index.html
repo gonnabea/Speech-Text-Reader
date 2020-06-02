@@ -10,7 +10,10 @@
     <section class="background">
         <div class="modal-container">
             <div class="modal" id="modal">
-                <h1 class="modal-title" id="modalTitle">음성 선택</h1>
+                <div class="modal-top">
+                    <h1 class="modal-title" id="modalTitle">음성 선택</h1>
+                    <span class="exit-btn" id="exitBtn">❌</span>
+                </div>
                 <select class="select-voice" id="selectVoice">
                     <option value="">a</option>
                 </select>
@@ -20,7 +23,7 @@
         </div>
         <header>
             <h1 class="title">Speech Text Reader</h1>
-            <button class="toggle-btn">보이스 선택</button>
+            <button class="toggle-btn" id="toggleBtn">보이스 선택</button>
         </header>
         <article class="examples">
             <div class="example-box" id="exampleBox">
